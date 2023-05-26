@@ -164,3 +164,238 @@
 
 # puts max(4, 3, 2)
 # puts "test" == "test"
+
+# ----- basic calculator
+# puts "Enter first number"
+# num1 = gets.chomp
+
+# puts "Enter second number"
+# num2 = gets.chomp
+
+# puts "Enter the operation"
+# puts "1. Addition \n2. Subtraction\n3. Multiplication\n4. Division"
+# operation = gets.chomp
+
+# if operation == "1"
+#     puts num1.to_i + num2.to_i
+# elsif operation == "2"
+#     puts num1.to_i - num2.to_i
+# elsif operation == "3"
+#     puts num1.to_i * num2.to_i
+# elsif operation == "4"
+#     puts num1.to_f / num2.to_f
+# else
+#     puts "Invalid choice"
+# end
+
+# ----- case statements
+# puts "Enter first number"
+# num1 = gets.chomp
+
+# puts "Enter second number"
+# num2 = gets.chomp
+
+# puts "Enter the operation"
+# puts "1. Addition \n2. Subtraction\n3. Multiplication\n4. Division"
+# operation = gets.chomp
+
+# case operation
+# when "1"
+#     puts num1.to_i + num2.to_i
+# when "2"
+#     puts num1.to_i - num2.to_i
+# when "3"
+#     puts num1.to_i * num2.to_i
+# when "4"
+#     puts num1.to_f / num2.to_f
+# else # default case
+#     puts "Invalid choice"
+# end
+
+# ----- while loops
+# index = 1
+# while index <= 10
+#     puts index ** 2
+#     index += 1
+# end
+
+# ----- guessing game
+# to_check = "peacock"
+# word = nil
+# while true
+#     puts "India's national bird?"
+#     ip = gets.chomp
+
+#     if word.equal? ip
+#         puts "Congrats!!"
+#         break
+#     end
+#     puts "Better luck next time :("
+# end
+
+# ----- for loops
+# friends = Array["mike", "john", "bob", "corey"]
+
+# for friend in friends
+#     puts friend
+# end
+
+# # for-each loop
+# friends.each do |friend|
+#     puts friend
+# end
+
+# # 0 and 5 included
+# for i in 0..5
+#     puts i
+# end
+
+# # 0..5
+# 6.times do |i|
+#     puts i
+# end
+
+# ----- exponent method
+# def power(a, b)
+#     to_return = 1
+#     for i in 1..b
+#         to_return *= a
+#     end
+#     return to_return
+# end
+
+# puts power(2, 0)
+
+# ----- comments
+# this is a comment
+=begin
+    multiline comment
+=end
+
+# ----- reading file
+# f = File.open("./f1.txt")
+
+# puts f.read
+
+# f.close
+
+# File.open("./f1.txt", "r") do |f|
+#     puts f
+
+#     # puts f.readline
+#     # puts f.readline
+#     # puts f.readchar
+
+#     # puts f.read
+#     # puts f.read.include? "world"
+
+#     for line in f.readlines
+#         puts line
+#     end
+
+# end # automatically close the file
+
+# ----- writing files
+# # overwrite the file
+# File.open("./op.txt", "w") do |f|
+#     f.write("this is test")
+# end
+
+# File.open("./op.txt", "a") do |f|
+#     f.write("this is another test")
+# end
+
+# ----- handling errors
+# arr = [1, 2]
+# begin
+#     arr["test"]
+#     puts 1/0
+# rescue ZeroDivisionError
+#     puts "not able to divide by zero"
+# rescue TypeError => e
+#     puts "type-error"
+#     puts e
+# end
+
+# ----- classes and objects
+# class Book
+#     attr_accessor :title, :author, :pages
+# end
+
+# book1 = Book.new()
+# book1.title = "trip to dubai"
+# book1.author = "matt"
+# book1.pages = 120
+
+# puts book1.title
+
+# ----- initialize method
+# class Book
+#     attr_accessor :title, :author, :pages
+
+#     def initialize(title, author, pages)
+#         @title = title
+#         @author = author
+#         @pages = pages
+#     end
+
+# end
+
+# book1 = Book.new("trip to dubai", "matt", 120)
+
+# ----- class methods
+# class Student
+#     attr_accessor :name, :major, :gpa
+
+#     def initialize(name, major, gpa)
+#         @name = name
+#         @major = major
+#         @gpa = gpa
+#     end
+
+#     def has_honors()
+#         if @gpa >= 3.5
+#             return true
+#         end
+#         return false
+#     end
+# end
+
+# s1 = Student.new("mike", "cs", 3.6)
+# puts s1.has_honors
+
+# ----- simple quiz
+# class Quiz
+#     attr_accessor :question, :answer
+
+#     def initialize(question, answer)
+#         @question = question
+#         @answer = answer
+#     end
+# end
+
+# propmts = [
+#     "Color of rose?\n1. Red\n2. Blue\n3. Yellow",
+#     "Color of sky?\n1. Blue\n2. Pink\n3. Green"
+# ]
+
+# questions = [
+#     Quiz.new(propmts[0], "1"),
+#     Quiz.new(propmts[1], "1")
+# ]
+
+# def run(questions)
+#     score = 0
+#     for question in questions
+
+#         puts question.question
+#         ans = gets.chomp
+
+#         if ans == question.answer
+#             score += 1
+#         end
+#     end
+#     puts "score " + score.to_s + "/2"
+# end
+
+# run(questions)
