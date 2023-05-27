@@ -399,3 +399,40 @@
 # end
 
 # run(questions)
+
+# ----- inheritance
+# class Vehicle
+#     def drive
+#         puts "Driving..."
+#     end
+
+#     def horn
+#         puts "Honking---"
+#     end
+# end
+
+# class Car < Vehicle
+#     def open_back_door
+#         puts "Chrrrr"
+#     end
+
+#     def horn
+#         puts "Poooooo"
+#     end
+# end
+
+# c = Car.new
+# c.horn
+# c.open_back_door
+
+# ----- modules
+# organizing methods and files
+# require_relative "./utils.rb"
+# include Utils
+
+# Utils.say_hello("jack")
+# puts Utils.calculate_fib(5)
+
+# ----- irb
+# interactive ruby command line
+# run ruby code from terminal same as python3
